@@ -9,7 +9,7 @@
               <div class="card">
                 <div class="card-header">
                   <div class="card-title-wrap bar-success">
-                    <h4 class="card-title mb-0">Produk page</h4>
+                    <h4 class="card-title mb-0">Tambah Produk</h4>
                   </div>
                 </div>
                 <div class="card-body">
@@ -50,6 +50,20 @@
                               </select>
                               <?php echo form_error('kategori'); ?>
                             </fieldset>               
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-12">
+                            <fieldset class="form-group">
+                              <label for="helperText">Shopee Link</label>
+                              <input type="text" class="form-control" name="shopee" value="<?php echo set_value('shopee'); ?>" placeholder="Shopee Link">
+                              <?php echo form_error('shopee'); ?>
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-12">
+                            <fieldset class="form-group">
+                              <label for="helperText">TokoPedia Link</label>
+                              <input type="text" class="form-control" name="tokopedia" value="<?php echo set_value('tokopedia'); ?>" placeholder="TokoPedia Link">
+                              <?php echo form_error('tokopedia'); ?>
+                            </fieldset>
                           </div>
                           <div class="col-12">
                             <fieldset class="form-group">

@@ -26,6 +26,9 @@
                    <li>
                      <a href="#"><i class="fa fa-pinterest"></i></a>
                    </li>
+                   <li>
+                     <a href="#"><i class="fa fa-brands fa-shopify"></i></a>
+                   </li>
                  </ul>
                </div>
              </div>

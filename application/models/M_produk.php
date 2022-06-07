@@ -35,7 +35,7 @@ class M_produk extends CI_Model
         return $query->result();
     }
 
-    function add_produk($nama, $isi, $berat, $harga, $kategori, $dataInfo = array())
+    function add_produk($nama, $isi, $berat, $harga, $kategori, $shopee, $tokopedia, $dataInfo = array())
     {
 
         $data = array(
@@ -44,6 +44,8 @@ class M_produk extends CI_Model
             'berat'         => $berat,
             'harga'         => $harga,
             'id_kategori'   => $kategori,
+            'shopee'        => $shopee,
+            'tokopedia'     => $tokopedia,
             'gambar1'       => $dataInfo[0]['file_name'] ? $dataInfo[0]['file_name'] : null,
             'gambar2'       => !empty($dataInfo[1]['file_name']) ? $dataInfo[1]['file_name'] : null,
             // cek if else ada atau tidak
@@ -66,7 +68,7 @@ class M_produk extends CI_Model
         return $query->result();
     }
 
-    function edit_produk($id, $nama, $isi, $berat, $harga, $kategori, $dataInfo = array())
+    function edit_produk($id, $nama, $isi, $berat, $harga, $kategori, $shopee, $tokopedia, $dataInfo = array())
     {
         $data = array(
             'nama_produk'   => $nama,
@@ -74,6 +76,8 @@ class M_produk extends CI_Model
             'berat'         => $berat,
             'harga'         => $harga,
             'id_kategori'   => $kategori,
+            'shopee'        => $shopee,
+            'tokopedia'     => $tokopedia,
             'gambar1'       => $dataInfo[0]['file_name'] ? $dataInfo[0]['file_name'] : null,
             'gambar2'       => !empty($dataInfo[1]['file_name']) ? $dataInfo[1]['file_name'] : null, // cek if else ada atau tidak
             'gambar3'       => !empty($dataInfo[2]['file_name']) ? $dataInfo[2]['file_name'] : null,

@@ -48,6 +48,12 @@ class Produk extends CI_Controller {
 		$this->form_validation->set_rules('kategori', 'Kategori', 'required|callback_check_default',[
 			'required' => '<span class="text-danger"><i>*Kategori tidak boleh kosong !</i></span>'
 		]);
+		$this->form_validation->set_rules('shopee', 'Shopee', 'required|callback_check_default',[
+			'required' => '<span class="text-danger"><i>*Shopee Link tidak boleh kosong !</i></span>'
+		]);
+		$this->form_validation->set_rules('tokopedia', 'TokoPedia', 'required|callback_check_default',[
+			'required' => '<span class="text-danger"><i>*TokoPedia Link tidak boleh kosong !</i></span>'
+		]);
 
 		if ($this->form_validation->run() == TRUE)
 		{
@@ -127,8 +133,10 @@ class Produk extends CI_Controller {
 				$berat 		= $this->input->post('berat');
 				$harga 		= $this->input->post('harga');
 		        $kategori 	= $this->input->post('kategori');
+				$shopee 	= $this->input->post('shopee');
+				$tokopedia 	= $this->input->post('tokopedia');
 
-				$this->M_produk->add_produk($judul, $isi, $berat, $harga, $kategori, $dataInfo);
+				$this->M_produk->add_produk($judul, $isi, $berat, $harga, $kategori, $shopee, $tokopedia, $dataInfo);
 				$this->session->set_flashdata('msg','success');
 				redirect(base_url('admin/Produk'));
 			}
@@ -185,6 +193,12 @@ class Produk extends CI_Controller {
 		]);
 		$this->form_validation->set_rules('kategori', 'Kategori', 'required|callback_check_default',[
 			'required' => '<span class="text-danger"><i>*Kategori tidak boleh kosong !</i></span>'
+		]);
+		$this->form_validation->set_rules('shopee', 'Shopee', 'required|callback_check_default',[
+			'required' => '<span class="text-danger"><i>*Shopee Link tidak boleh kosong !</i></span>'
+		]);
+		$this->form_validation->set_rules('tokopedia', 'TokoPedia', 'required|callback_check_default',[
+			'required' => '<span class="text-danger"><i>*TokoPedia tidak boleh kosong !</i></span>'
 		]);
 
 		if($this->form_validation->run() == TRUE)
@@ -259,8 +273,10 @@ class Produk extends CI_Controller {
 		        	$berat = $this->input->post('berat');
 		        	$harga = $this->input->post('harga');
 		        	$kategori = $this->input->post('kategori');
+					$shopee = $this->input->post('shopee');
+					$tokopedia = $this->input->post('tokopedia');
 
-		        	$this->M_produk->edit_produk($id, $judul, $isi, $berat, $harga, $kategori, $dataInfo);
+		        	$this->M_produk->edit_produk($id, $judul, $isi, $berat, $harga, $kategori, $shopee, $tokopedia, $dataInfo);
 					$this->session->set_flashdata('msg','diedit');
 		        	redirect(base_url('admin/Produk'));
 	        	}

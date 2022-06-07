@@ -1,7 +1,5 @@
   <body data-col="2-columns" class=" 2-columns ">
-    <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
-
 
       <div data-active-color="white" data-background-color="crystal-clear" data-image="<?php echo base_url('backend/app-assets/img/sidebar-bg/08.jpg') ?>" class="app-sidebar">
         <div class="sidebar-header">
@@ -16,6 +14,7 @@
               <li class=" nav-item"><a href="<?php echo base_url('admin/Produk') ?>"><i class="icon-layers"></i><span data-i18n="" class="menu-title">Produk</span></a>
               <li class=" nav-item"><a href="<?php echo base_url('admin/Kategori') ?>"><i class="icon-grid"></i><span data-i18n="" class="menu-title">Kategori</span></a>
               <li class=" nav-item"><a href="<?php echo base_url('admin/Kontak') ?>"><i class="icon-envelope-letter"></i><span data-i18n="" class="menu-title">Kontak</span></a>
+              <li class=" nav-item"><a href="<?php echo base_url('admin/Testimoni') ?>"><i class="icon-grid"></i><span data-i18n="" class="menu-title">Testimoni</span></a>
               <li class=" nav-item"><a href="<?php echo base_url('admin/Login/logout') ?>"><i class="icon-logout"></i><span data-i18n="" class="menu-title">Logout</span></a>
               </li>
             </ul>
@@ -33,8 +32,7 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav">
                 <li class="dropdown nav-item mt-1"><a id="dropdownBasic2" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><i class="ft-bell blue-grey darken-4"></i>
-                    <span class="notification badge badge-pill badge-danger"><?php echo $total_pesan ?></span>
-
+                    <!-- <span class="notification badge badge-pill badge-danger"><?php echo $total_pesan ?></span> -->
                     <p class="d-none">Notifications</p>
                   </a>
 

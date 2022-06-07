@@ -25,6 +25,8 @@
                       <th> Tanggal </th>
                       <th> Berat </th>
                       <th> Harga </th>
+                      <th> Shopee Link</th>
+                      <th> TokoPedia Link</th>
                       <th> Kategori </th>
                       <th style="text-align: center;"> Action </th>
                     </tr>
@@ -37,6 +39,8 @@
                         <td><?php echo $pro->tanggal; ?></td>
                         <td><?php echo $pro->berat; ?></td>
                         <td>Rp.<?php echo number_format($pro->harga,0,',','.') ?>,-</td>
+                        <td><?= $pro->shopee ?></td>
+                        <td><?= $pro->tokopedia ?></td>
                         <td><?php echo $pro->kategori; ?></td>
                         <td style="text-align:center;">
                           <a class="btn btn-outline-primary" href="<?php echo base_url() . 'admin/Produk/page_edit/' . $pro->id_produk; ?>"><i class="fa fa-pencil"></i></a> 

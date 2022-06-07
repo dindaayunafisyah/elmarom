@@ -56,6 +56,20 @@
                               <?php echo form_error('kategori'); ?>
                             </fieldset>               
                           </div>
+                          <div class="col-xl-6 col-lg-6 col-md-12">
+                            <fieldset class="form-group">
+                              <label for="helperText">Shopee Link</label>
+                              <input type="text" class="form-control" name="shopee" value="<?= $edpro->shopee ?>" placeholder="Shopee Link">
+                              <?php echo form_error('shopee'); ?>
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-12">
+                            <fieldset class="form-group">
+                              <label for="helperText">Tokopedia Link</label>
+                              <input type="text" class="form-control" name="tokopedia" value="<?= $edpro->tokopedia ?>" placeholder="TokoPedia Link">
+                              <?php echo form_error('tokopedia'); ?>
+                            </fieldset>
+                          </div>
                           <div class="col-12">
                             <fieldset class="form-group">
                               <label for="basicInput">Deskripsi produk</label>
