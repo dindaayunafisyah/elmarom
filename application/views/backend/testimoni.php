@@ -38,9 +38,9 @@
                         <td><?php echo $tst->nama; ?></td>
                         <td><?= $tst->keterangan ?></td>
                         <td style="text-align:center;">
-                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Edittestimoni<?= $tst->nama ?>"><i class="fa fa-pencil"></i>
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Edittestimoni<?= $tst->id_testimoni ?>"><i class="fa fa-pencil"></i>
                           </button>
-                          <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#Hapustestimoni<?= $tst->nama ?>"><i class="fa fa-trash"></i>
+                          <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#Hapustestimoni<?= $tst->id_testimoni ?>"><i class="fa fa-trash"></i>
                           </button>
                           </a>
                         </td>
