@@ -115,8 +115,9 @@
                         <a href="#"> <?= $pro->berat ?></a>
                       </span>
                       <span><i class="fa fa-tags"></i> <a href="#"> Rp.<?php echo number_format($pro->harga, 0, ',', '.') ?>,-</a></span>
-                      <span><i class="fa fa-brands fa-shopify"></i><a href="#"><?= $pro->shopee ?></a></span>
-                      <span><i class="fa fa-brands fa-shopify"></i><a href="#"><?= $pro->tokopedia ?></a></span>
+
+                      &nbsp;&nbsp;&nbsp; <a class="btn btn-warning" href="<?= $pro->shopee ?>">Shopee</a>
+                      <a class="btn btn-success" href="<?= $pro->tokopedia ?>">TokoPedia</a>
                     </div>
                     <div class="entry-content">
                       <?= $pro->isi_produk ?>

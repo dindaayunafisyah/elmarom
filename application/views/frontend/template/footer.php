@@ -15,19 +15,19 @@
                <div class="footer-icons">
                  <ul>
                    <li>
-                     <a href="#"><i class="fa fa-facebook"></i></a>
+                     <a href="#"><i class="fa fa-instagram"></i></a>
                    </li>
                    <li>
-                     <a href="#"><i class="fa fa-twitter"></i></a>
+                     <a href="#"><i class="fa fa-youtube"></i></a>
                    </li>
                    <li>
-                     <a href="#"><i class="fa fa-google"></i></a>
+                     <a href="#"><i class="fa fa-shopee"></i></a>
                    </li>
                    <li>
-                     <a href="#"><i class="fa fa-pinterest"></i></a>
+                     <a href="#"><i class="fa fa-tokopedia"></i></a>
                    </li>
                    <li>
-                     <a href="#"><i class="fa fa-brands fa-shopify"></i></a>
+                     <a href="#"><i class="fa fa-tiktok"></i></a>
                    </li>
                  </ul>
                </div>
