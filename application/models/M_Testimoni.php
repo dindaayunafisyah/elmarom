@@ -43,4 +43,11 @@ class M_testimoni extends CI_Model
     // {
     //     return $this->db->delete($table, $where);
     // }
+
+    function counttestimoni()
+    {
+        $sql = "select count(*) as testimoni from testimoni";
+        $result = $this->db->query($sql);
+        return $result->row()->testimoni;
+    }
 }

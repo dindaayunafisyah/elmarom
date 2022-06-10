@@ -213,4 +213,21 @@ class M_produk extends CI_Model
         $query = $this->db->get('produk', $sampai, $dari);
         return $query->result_array();
     }
+
+    function countkategori()
+    {
+        $sql = "select count(id_kategori) as kategori from kategori";
+        $result = $this->db->query($sql);
+        return $result->row()->kategori;
+    }
+
+    function countproduk()
+    {
+        $sql = "select count(id_produk) as produk from produk";
+        $result = $this->db->query($sql);
+        return $result->row()->produk;
+    }
+
+
+
 }
