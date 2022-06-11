@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Dashboard extends CI_Controller
+{
 
 	public function __construct()
 	{
@@ -16,7 +17,7 @@ class Dashboard extends CI_Controller {
 		$data['produk'] = $this->M_produk->tampil_data()->result();
 		$data['portofolio'] = $this->M_produk->portofolio()->result();
 
-		$this->load->view('frontend/template/header');		
+		$this->load->view('frontend/template/header');
 		$this->load->view('frontend/dashboard', $data);
 		$this->load->view('frontend/template/footer');
 	}
@@ -36,8 +37,7 @@ class Dashboard extends CI_Controller {
 			'required' => '<span class="validation" style="display:block;"><i>*Message tidak boleh kosong !</i></span>'
 		]);
 
-		if ($this->form_validation->run() == TRUE)
-		{
+		if ($this->form_validation->run() == TRUE) {
 			$nama = $this->input->post('nama');
 			$email = $this->input->post('email');
 			$subject = $this->input->post('subject');
@@ -46,12 +46,10 @@ class Dashboard extends CI_Controller {
 			$this->M_kontak->insert($nama, $email, $subject, $message);
 			$this->session->set_flashdata('kontak', 'success');
 			redirect('/#contact');
-
-		}else{
+		} else {
 
 			$this->session->set_flashdata('kontak', 'gagal');
 			redirect('/#contact');
 		}
-
 	}
 }
