@@ -214,44 +214,36 @@
 <!-- awesome-portfolio end -->
 
 <!-- Start Testimonials -->
-<div class="testimonials-area">
+<div  class="testimonials-area">
   <div class="testi-inner area-padding">
     <div class="testi-overly"></div>
-    <div class="container ">
+    <div  class="container ">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <!-- Start testimonials Start -->
-          <div class="testimonial-content text-center">
-            <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
+          <div id="testimoni"  class="testimonial-content text-center">
+            <a class="quate" href="#"><i class="fa fa-quote-right"></i></a> 
+            <br> <br> 
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Tambahtestimoni">
+                    <i class="ft-plus"> Drop Your Testimonials</i>
+                  </button>
             <!-- start testimonial carousel -->
-            <div class="testimonial-carousel">
+            <div   class="testimonial-carousel">
+            <?php foreach ($testi as $t) : ?>
+                      <tr>
               <div class="single-testi">
                 <div class="testi-text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                  <?php echo $t->keterangan; ?>
                   </p>
-                  <h6>Boby</h6>
+                  <h6><?php echo $t->nama; ?></h6>
                 </div>
               </div>
+              <?php endforeach; ?>
               <!-- End single item -->
-              <div class="single-testi">
-                <div class="testi-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                  </p>
-                  <h6>Jhon</h6>
-                </div>
-              </div>
-              <!-- End single item -->
-              <div class="single-testi">
-                <div class="testi-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                  </p>
-                  <h6>Fleming</h6>
-                </div>
-              </div>
-              <!-- End single item -->
+              
+
+
             </div>
           </div>
           <!-- End testimonials end -->
@@ -261,6 +253,34 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="Tambahtestimoni" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Drop Your Testimonials</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="form-horizontal" action="<?php echo base_url() . 'Dashboard/tambah' ?>" method="post">
+          <div class="modal-body">
+            <label>Nama</label>
+            <input type="text" class="form-control" name="nama"/>
+          </div>
+          <div class="modal-body">
+            <label>Keterangan</label>
+            <input type="text" class="form-control" name="keterangan"/>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
 <!-- End Testimonials -->
 <!-- Start Blog Area -->
 <div id="blog" class="blog-area">

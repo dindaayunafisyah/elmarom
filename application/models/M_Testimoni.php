@@ -8,6 +8,13 @@ class M_testimoni extends CI_Model
         return $tst;
     }
 
+    function tampiltesti()
+    {
+        $tst = $this->db->query("SELECT * FROM testimoni ORDER BY id_testimoni DESC LIMIT 5");
+        return $tst;
+    }
+
+
     function tambah_testimoni($nama, $ket)
     {
         $data = array(
@@ -31,16 +38,26 @@ class M_testimoni extends CI_Model
         return $result;
     }
 
-     function hapus_testimoni($nama)
+     function hapus_testimoni($id_testimoni)
     {
-        $this->db->select('*');
-        $this->db->from('testimoni');
-        $this->db->where('nama', $nama);
-        $this->db->delete(array('nama', 'testimoni'));
+		$this->db->where($id_testimoni); 
+		$this->db->delete('testimoni');
+
+        // $this->db->select('*');
+        // $this->db->from('testimoni');
+        // $this->db->where('id_testimoni', $id_testimoni);
+        // $this->db->delete(array('id_testimoni', 'testimoni'));
     }
 
     // public function hapus($where, $table)
     // {
     //     return $this->db->delete($table, $where);
     // }
+
+    function counttestimoni()
+    {
+        $sql = "select count(*) as testimoni from testimoni";
+        $result = $this->db->query($sql);
+        return $result->row()->testimoni;
+    }
 }

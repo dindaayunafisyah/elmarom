@@ -8,15 +8,18 @@
               <div class="card bg-white">
                 <div class="card-body">
                   <div class="card-block pt-2 pb-0">
+                  <a  href="<?php echo base_url('admin/Kategori') ?>">
                     <div class="media">
-                      <div class="media-body white text-left">
-                        <h4 class="font-medium-5 card-title mb-0">$5789</h4>
-                        <span class="grey darken-1">Total Visits</span>
+                    <div class="media-body white text-left">
+                        <h4 class="font-medium-5 card-title mb-0"><?php echo $countkategori?></h4>
+                        <span class="grey darken-1">Total Kategori</span>
+                        </a>
                       </div>
                       <div class="media-right text-right">
                         <i class="icon-cup font-large-1 primary"></i>
                       </div>
                     </div>
+                    </a>
                   </div>
                   <div id="Widget-line-chart" class="height-150 lineChartWidget WidgetlineChart mb-2">
                   </div>
@@ -27,15 +30,17 @@
               <div class="card bg-white">
                <div class="card-body">
                 <div class="card-block pt-2 pb-0">
+                <a  href="<?php echo base_url('admin/Produk') ?>">
                  <div class="media">
                   <div class="media-body white text-left">
-                   <h4 class="font-medium-5 card-title mb-0">$4567</h4>
-                   <span class="grey darken-1">Total Sales</span>
+                   <h4 class="font-medium-5 card-title mb-0"><?php echo $countproduk?></h4>
+                   <span class="grey darken-1">Total Proudk</span>
                  </div>
                  <div class="media-right text-right">
                    <i class="icon-wallet font-large-1 warning"></i>
                  </div>
                </div>
+               </a>
              </div>
              <div id="Widget-line-chart1" class="height-150 lineChartWidget WidgetlineChart1 mb-2">
              </div>
@@ -46,15 +51,17 @@
         <div class="card bg-white">
           <div class="card-body">
             <div class="card-block pt-2 pb-0">
+            <a  href="<?php echo base_url('admin/Testimoni') ?>">
               <div class="media">
                 <div class="media-body white text-left">
-                  <h4 class="font-medium-5 card-title mb-0">$9822</h4>
-                  <span class="grey darken-1">Total Value</span>
+                  <h4 class="font-medium-5 card-title mb-0"><?php echo $counttestimoni?></h4>
+                  <span class="grey darken-1">Total Testimoni</span>
                 </div>
               <div class="media-right text-right">
                 <i class="icon-basket-loaded font-large-1 success"></i>
               </div>
             </div>
+            </a>
           </div>
           <div id="Widget-line-chart2" class="height-150 lineChartWidget WidgetlineChart2 mb-2">
           </div>
@@ -66,7 +73,7 @@
 
   <!--Line with Area Chart 1 Starts-->
   <div class="row match-height">
-  	<div class="col-xl-8 col-lg-12 col-12">
+  	<!-- <div class="col-xl-8 col-lg-12 col-12">
   		<div class="card">
   			<div class="card-header">
           		<div class="card-title-wrap bar-success">
@@ -80,7 +87,7 @@
   				</div>
   			</div>
   		</div>
-  	</div>
+  	</div> -->
     <div class="col-xl-4 col-lg-12 col-12">
       <div class="card">
         <div class="card-header">

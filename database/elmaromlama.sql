@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Jun 2022 pada 21.24
--- Versi server: 10.4.10-MariaDB
--- Versi PHP: 7.3.12
+-- Waktu pembuatan: 10 Jun 2022 pada 06.04
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -67,9 +66,7 @@ INSERT INTO `kontak` (`id`, `nama`, `email`, `subject`, `message`, `status`) VAL
 (5, 'aaa', 'dwialdian2@gmail.com', 'Haloo', 'Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi.\r\n\r\nvoluptas, praesen', 0),
 (6, 'HADI IRWANSYAH', 'aldian@gmail.com', 'ege', 'bxbxb', 0),
 (7, 'HADI IRWANSYAH', 'aldian@gmail.com', 'Haloo', 'afafaf', 0),
-(8, 'ahmad daifullah', 'adefsing@gmail.com', 'beli kue', 'kue kering nastar', 0),
-(9, 'Ummalatul', 'kamilahummalatul@gmail.com', 'bsahhs', 'xs', 1),
-(10, 'Umma', 'kamilahummalatul@gmail.com', 'bsahhs', 'aa', 1);
+(8, 'ahmad daifullah', 'adefsing@gmail.com', 'beli kue', 'kue kering nastar', 0);
 
 -- --------------------------------------------------------
 
@@ -113,7 +110,6 @@ INSERT INTO `produk` (`id_produk`, `nama_produk`, `isi_produk`, `tanggal`, `bera
 --
 
 CREATE TABLE `testimoni` (
-  `id_testimoni` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `keterangan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -122,12 +118,8 @@ CREATE TABLE `testimoni` (
 -- Dumping data untuk tabel `testimoni`
 --
 
-INSERT INTO `testimoni` (`id_testimoni`, `nama`, `keterangan`) VALUES
-(4, 'Umma', 'pelayanan dan kuenya bintang 5 sih'),
-(5, 'mark', 'good'),
-(6, 'han jisung', 'oke banget'),
-(7, 'agus', 'bah elmarom emang terbaik wkkw'),
-(8, 'nana', 'ngga nyesel beli produk elmarom');
+INSERT INTO `testimoni` (`nama`, `keterangan`) VALUES
+('Dyta', 'Produk sangat enak');
 
 -- --------------------------------------------------------
 
@@ -176,12 +168,6 @@ ALTER TABLE `produk`
   ADD KEY `id_kategori` (`id_kategori`);
 
 --
--- Indeks untuk tabel `testimoni`
---
-ALTER TABLE `testimoni`
-  ADD PRIMARY KEY (`id_testimoni`);
-
---
 -- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
@@ -201,19 +187,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
   MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT untuk tabel `testimoni`
---
-ALTER TABLE `testimoni`
-  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

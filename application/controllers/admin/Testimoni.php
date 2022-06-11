@@ -64,13 +64,11 @@ class Testimoni extends CI_Controller {
 	// 	redirect('admin/Testimoni');
 	// }
 
-	public function hapus()
+	public function hapus($id_testimoni)
 	{
-		$nama = $this->input->post('nama');
-		$ket = $this->db->get_where('testimoni', array('nama' => $nama));
-
-		$hapus = $this->M_Testimoni->hapus_testimoni($nama);
+		$id_testimoni= array('id_testimoni' => $id_testimoni);
+		$hapus = $this->M_Testimoni->hapus_testimoni($id_testimoni);
 		$this->session->set_flashdata('kat', 'hapus');
-		redirect(base_url('admin/Kategori'));
+		redirect(base_url('admin/Testimoni'));
 	}
 }

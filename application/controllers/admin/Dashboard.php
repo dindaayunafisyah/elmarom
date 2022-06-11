@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_produk');
 		$this->load->model('M_kontak');
+		$this->load->model('M_testimoni');
 		$this->load->model('M_login');
 		$this->load->library('form_validation');
 	}
@@ -18,6 +19,9 @@ class Dashboard extends CI_Controller {
 		$data['user'] = $this->db->get_where('user', ['id' => $this->session->userdata('id')])->row_array();
 		$data['total_pesan'] = $this->M_kontak->total_pesan();
 		$data['notif'] = $this->M_kontak->get_notif();
+		$data['countkategori'] = $this->M_produk->countkategori();
+		$data['countproduk'] = $this->M_produk->countproduk();
+		$data['counttestimoni'] = $this->M_testimoni->counttestimoni();
 
 		$this->load->view('backend/template/header');		
 		$this->load->view('backend/template/sidebar', $data);

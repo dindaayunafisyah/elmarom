@@ -204,7 +204,7 @@
 
   <!-- Modal Edit-->
   <?php foreach ($testimoni as $tst) : ?>
-  <div class="modal fade" id="Edittestimoni<?= $tst->nama ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Edittestimoni<?= $tst->id_testimoni ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -233,7 +233,7 @@
   </div>
 
    <!-- Modal Hapus -->
-  <div class="modal fade" id="Hapustestimoni<?php echo $tst->nama; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Hapustestimoni<?php echo $tst->id_testimoni; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -242,14 +242,14 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="form-horizontal" action="<?php echo base_url() . 'admin/Testimoni/hapus' ?>" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
           <div class="modal-body">
-            <input type="hidden" name="nama" value="<?php echo $tst->nama; ?>" />
-            Apakah anda yakin ingin menghapus <strong><?php echo $tst->nama; ?> ?</strong>
+            Apakah anda yakin ingin menghapus testi dengan id <strong><?php echo $tst->id_testimoni; ?> ?</strong>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-            <button type="submit" class="btn btn-danger">Hapus</button>
+
+              <a  role="button" class="btn btn-danger" href="<?php echo base_url() ?>admin/Testimoni/hapus/<?php echo $tst->id_testimoni?>">Hapus</a>
           </div>
         </form>
       </div>
