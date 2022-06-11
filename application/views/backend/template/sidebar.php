@@ -32,7 +32,7 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav">
                 <li class="dropdown nav-item mt-1"><a id="dropdownBasic2" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><i class="ft-bell blue-grey darken-4"></i>
-                    <!-- <span class="notification badge badge-pill badge-danger"><?php echo $total_pesan ?></span> -->
+                    <span class="notification badge badge-pill badge-danger"><?php echo $total_pesan ?></span>
                     <p class="d-none">Notifications</p>
                   </a>
 
